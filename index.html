@@ -1628,7 +1628,7 @@
                 document.querySelectorAll("input[ft-tax-calc]").forEach(item => {
                     item.addEventListener('input', (ev) => {
                         item.value = item.value.replace(/[^0-9]/g, '');
-                        item.value = item.value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+                        //item.value = item.value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
                         if (parseInt(item.value.replace(/,/g, '')) > 15000000) item.value = "15,000,000";
                     })
                 })
